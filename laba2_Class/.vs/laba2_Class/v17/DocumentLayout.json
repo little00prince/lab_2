@@ -1,0 +1,45 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\anton\\source\\repos\\lab__2Struct\\laba2_Class\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C9858184-D1F1-4D47-BDFB-B83098E1B87B}|laba2_Class\\laba2_Class.vcxproj|C:\\Users\\anton\\source\\repos\\lab__2Struct\\laba2_Class\\laba2_Class\\laba2_Class.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{C9858184-D1F1-4D47-BDFB-B83098E1B87B}|laba2_Class\\laba2_Class.vcxproj|solutionrelative:laba2_Class\\laba2_Class.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "laba2_Class.cpp",
+              "DocumentMoniker": "C:\\Users\\anton\\source\\repos\\lab__2Struct\\laba2_Class\\laba2_Class\\laba2_Class.cpp",
+              "RelativeDocumentMoniker": "laba2_Class\\laba2_Class.cpp",
+              "ToolTip": "C:\\Users\\anton\\source\\repos\\lab__2Struct\\laba2_Class\\laba2_Class\\laba2_Class.cpp",
+              "RelativeToolTip": "laba2_Class\\laba2_Class.cpp",
+              "ViewState": "AQIAAG8AAAAAAAAAAAAUwJ8AAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-09-23T12:28:22.104Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
