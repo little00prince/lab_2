@@ -72,3 +72,144 @@ float block_f()
     return e;
 }
 
+//Ввод в структуру
+void input(int type, float sides[])
+{
+    int i = 0;
+    if (g == 0)
+    {
+        first.type = type;
+        switch (type)
+        {
+        case 1:
+            first.figure.cube.a = sides[i];
+            break;
+        case 2:
+            first.figure.ball.r = sides[i];
+            break;
+        case 3:
+            first.figure.tetrapyramid.b = sides[i];
+            break;
+        default:;
+        }
+    }
+    else
+    {
+        (*second).type = type;
+        switch (type)
+        {
+        case 1:
+            (*second).figure.cube.a = sides[i];
+            break;
+        case 2:
+            (*second).figure.ball.r = sides[i];
+            break;
+        case 3:
+            (*second).figure.tetrapyramid.b = sides[i];
+            break;
+        default:;
+        }
+    }
+}
+//Обработка данных
+void processing()
+{
+    float s, v, a[N];
+    if (g == 0)
+    {
+        switch (first.type)
+        {
+        case 1:
+            a[0] = first.figure.cube.a;
+            first.figure.cube.diagonal = sqrtf(3) * a[0];
+            s = powf(a[0], 2) * 6;
+            v = powf(a[0], 3);
+            break;
+        case 2:
+            a[0] = first.figure.ball.r;
+            first.figure.ball.d = a[0] * 2;
+            s = 4 * 3.14 * pow(a[0], 2);
+            v = 4 / 3 * 3.14 * pow(a[0], 3);
+            break;
+        case 3:
+            a[0] = first.figure.tetrapyramid.b;
+            s = (sqrtf(3) * pow(a[0], 2)) / 4;
+            v = (pow(a[0], 3) * sqrtf(2)) / 12;
+            break;
+        default:;
+        }
+        first.area = s;
+        first.volume = v;
+    }
+    else
+    {
+        switch ((*second).type)
+        {
+        case 1:
+            a[0] = (*second).figure.cube.a;
+            (*second).figure.cube.diagonal = sqrtf(3) * a[0];
+            s = powf(a[0], 2) * 6;
+            v = powf(a[0], 3);
+            break;
+        case 2:
+            a[0] = (*second).figure.ball.r;
+            (*second).figure.ball.d = a[0] * 2;
+            s = 4 * 3.14 * pow(a[0], 2);
+            v = 4 / 3 * 3.14 * pow(a[0], 3);
+            break;
+        case 3:
+            a[0] = (*second).figure.tetrapyramid.b;
+            s = (sqrtf(3) * pow(a[0], 2)) / 4;
+            v = (pow(a[0], 3) * sqrtf(2)) / 12;
+            break;
+        default:;
+        }
+        (*second).area = s;
+        (*second).volume = v;
+    }
+}
+//Вывод структуры
+void output()
+{
+    printf("Фигура: ");
+    if (g == 0)
+    {
+        switch (first.type)
+        {
+        case 1:
+            printf("куб");
+            printf("\nДиагональ: %f", first.figure.cube.diagonal);
+            break;
+        case 2:
+            printf("шар");
+            printf("\nДиаметр: %f", first.figure.ball.d);
+            break;
+        case 3:
+            printf("правильный тетраид");
+            break;
+        default:;
+        }
+        printf("\nПлощадь: %f", first.area);
+        printf("\nОбъем: %f\n", first.volume);
+    }
+    else
+    {
+        switch ((*second).type)
+        {
+        case 1:
+            printf("куб");
+            printf("\nДиагональ: %f", (*second).figure.cube.diagonal);
+            break;
+        case 2:
+            printf("шар");
+            printf("\nДиаметр: %f", (*second).figure.ball.d);
+            break;
+        case 3:
+            printf("Правильный тетраид");
+            break;
+        default:;
+        }
+        printf("\nПлощадь: %f", (*second).area);
+        printf("\nОбъем: %f\n", (*second).volume);
+    }
+}
