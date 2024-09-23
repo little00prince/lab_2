@@ -1,4 +1,5 @@
 ﻿#define _CRT_SECURE_NO_WARNINGS
+#define N 3
 #include <iostream>
 
 struct Figures
@@ -23,11 +24,48 @@ struct Figures
 };
 
 Figures first, * second = NULL;
+int g = 0;
+
+int block_i(int min, int max);
+float block_f();
+void input(int type, float sides[]);
+void processing();
+void output();
 
 int main()
 {
+    int type, min, max, i;
+    float sides[N];
     setlocale(LC_ALL, "Rus");
-
+    second = (Figures*)malloc(sizeof(Figures));
+    do {
+        printf("\n1-Куб\n2-Шар\n3-Правильный тетраид\n--------------------\nВыберите фигуру:");
+        min = 1; max = 3;
+        type = block_i(min, max);
+        i = 0;
+        switch (type)
+        {
+        case 1:
+            printf("Длина стороны куба:");
+            sides[i] = block_f();
+            break;
+        case 2:
+            printf("Радиус шара:");
+            sides[i] = block_f();
+            break;
+        case 3:
+            printf("Длина стороны правильного тетраида:");
+            sides[i] = block_f();
+            break;
+        default:;
+        }
+        input(type, sides);
+        processing();
+        output();
+        g++;
+        printf("Если хотите выйти из программы нажмите Y. Чтобы продолжить любую другую кнопку.");
+    } while (getchar() != 'y');
+    free(second);
 }
 
 //Защита на целые числа
