@@ -1,4 +1,7 @@
-﻿#include <iostream>
+﻿#define _CRT_SECURE_NO_WARNINGS
+#define N 3
+#include <iostream>
+#include <conio.h>
 
 class figure
 {
@@ -114,7 +117,78 @@ float block_f();
 
 int main()
 {
+    int type, min, max, i, j;
+    float e, v, s;
+    cube* one = NULL;
+    ball* two = NULL;
+    tetrapyramid* three = NULL;
+    setlocale(LC_ALL, "Rus");
+    one = (cube*)calloc(N, sizeof(cube));
+    two = (ball*)calloc(N, sizeof(ball));
+    three = (tetrapyramid*)calloc(N, sizeof(tetrapyramid));
+    j = 0;
+    //Полный цикл программы
+    do {
+        printf("\n1-Куб\n2-Шар\n3-Правильный тетраид\n--------------------\nВыберите фигуру:");
+        min = 1; max = 3;
+        type = block_i(min, max);
+        //Ввод и обработка
+        switch (type)
+        {
+        case 1:
+            printf("Длина стороны куба:");
+            e = block_f();
+            (one + j)->set_a(e);
+            (one + j)->work_cube();
+            break;
+        case 2:
+            printf("Радиус шара:");
+            e = block_f();
+            two->set_r(e);
+            two->work_ball();
+            break;
+        case 3:
+            printf("Длина стороны правильного тетраида:");
+            e = block_f();
+            three->set_b(e);
+            three->work_tetrapyramid();
+            break;
+        default:;
+        }
+        //Вывод
+        printf("Фигура: ");
 
+        switch (type)
+        {
+        case 1:
+            printf("Куб");
+            e = (one + j)->get_diagonal();
+            printf("\nДиагональ: %f", e);
+            s = (one + j)->get_area();
+            v = (one + j)->get_volume();
+            j++;
+            break;
+        case 2:
+            printf("Шар");
+            e = two->get_d();
+            printf("\nДиаметр: %f", e);
+            s = two->get_area();
+            v = two->get_volume();
+            break;
+        case 3:
+            printf("Правильный тетраид");
+            s = three->get_area();
+            v = three->get_volume();
+            break;
+        default:;
+        }
+        printf("\nПлощадь: %f", s);
+        printf("\nОбъем: %f\n", v);
+        printf("\nНажмите ESC для выхода или любую клавишу для продолжения\n");
+    } while (j < N && _getch() != 27);
+    delete one;
+    delete two;
+    delete three;
 }
 
 //Защита на целые числа
