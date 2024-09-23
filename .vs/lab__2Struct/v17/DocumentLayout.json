@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\anton\\source\\repos\\lab__2Struct\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1AC145EE-7B1E-4F21-98D9-0C58D1CD6021}|lab__2Struct\\lab__2Struct.vcxproj|C:\\Users\\anton\\source\\repos\\lab__2Struct\\lab__2Struct\\lab__2Struct.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{1AC145EE-7B1E-4F21-98D9-0C58D1CD6021}|lab__2Struct\\lab__2Struct.vcxproj|solutionrelative:lab__2Struct\\lab__2Struct.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\anton\\source\\repos\\lab__2Struct\\lab__2Struct\\lab__2Struct.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:lab__2Struct\\lab__2Struct.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -32,7 +32,7 @@
               "RelativeDocumentMoniker": "lab__2Struct\\lab__2Struct.cpp",
               "ToolTip": "C:\\Users\\anton\\source\\repos\\lab__2Struct\\lab__2Struct\\lab__2Struct.cpp",
               "RelativeToolTip": "lab__2Struct\\lab__2Struct.cpp",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAABAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABsAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-09-23T11:26:18.666Z",
               "EditorCaption": ""
